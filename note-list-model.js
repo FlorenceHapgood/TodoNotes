@@ -3,7 +3,7 @@
      this.list = []
   };
 
-  NoteList.prototype.returnNoteList = function() {
+  NoteList.prototype.returnList = function() {
     return this.list
   }
 
