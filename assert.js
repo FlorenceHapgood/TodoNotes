@@ -14,11 +14,22 @@ var assert = {
       return true;
     }
   },
+
   hashIncludes: function(obj, message) {
     if (Object.values(obj).includes(message)) {
       return true;
     } else  {
       return false;
     }
+  },
+
+
+  includes: function(item1, item2) {
+    if (item1.includes(item2)) {
+      return true;
+  } else {
+    return false;
   }
-};
+},
+
+}
