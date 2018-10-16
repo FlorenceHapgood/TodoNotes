@@ -14,8 +14,8 @@ var assert = {
       return true;
     }
   },
-  includes: function(obj, message) {
-    if (Object.values(obj).indexOf(message) > -1) {
+  hashIncludes: function(obj, message) {
+    if (Object.values(obj).includes(message)) {
       return true;
     } else  {
       return false;
