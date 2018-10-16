@@ -1,10 +1,12 @@
 (function(exports) {
   function testReturnList() {
     var noteList = new NoteList();
-    return assert.isSame(noteList.returnList(), noteList.list)
+    if (assert.isSame(noteList.returnList(), noteList.list) === true) {
+      console.log("This test is passing!")
+    }
   }
 
-
+//testReturnList()
   exports.testReturnList = testReturnList
 })(this);
 
@@ -15,8 +17,6 @@
     noteList.addNote("text")
     return assert.includes(noteList.list, "text")
   }
-
-
 
   exports.testaddNote = testaddNote
 })(this);
