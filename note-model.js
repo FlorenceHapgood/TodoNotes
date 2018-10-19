@@ -1,25 +1,17 @@
 (function(exports) {
-  function Note(text) {
+  function Note(text, id) {
     this.text = text;
+    this.id = id
   };
 
   Note.prototype.returnText = function(){
     return this.text
   };
 
+  Note.prototype.returnID = function(){
+    return this.id
+  }
+
+
   exports.Note = Note;
 })(this);
-
-
-
-
-
-
-// var CreateNote = function(heading, text) {
-//     return {
-//         title: heading,
-//         body: text
-//     }
-// };
-//
-// module.exports.CreateNote = CreateNote;

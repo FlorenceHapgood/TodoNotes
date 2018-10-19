@@ -5,8 +5,9 @@
   };
 
   NoteListView.prototype.returnListHTML = function () {
-    var array = this.noteList["list"]
-    return "<ul><li><div>" + array.join("</div></li><li><div>") + "</div></li></ul>"
+    var array = this.noteList.returnList()
+    var shortArray = array.map(item => item.substring(0, 20))
+    return "<ul><li><div>" + shortArray.join("</div></li><li><div>") + "</div></li></ul>"
   };
 
   exports.NoteListView = NoteListView

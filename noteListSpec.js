@@ -1,4 +1,4 @@
-(function(exports) {
+
   function testReturnList() {
     var noteList = new NoteList();
     if (assert.isSame(noteList.returnList(), noteList.list) === true) {
@@ -6,17 +6,22 @@
     }
   }
 
-//testReturnList()
-  exports.testReturnList = testReturnList
-})(this);
+   testReturnList()
 
-
-(function(exports) {
   function testaddNote() {
     var noteList = new NoteList();
     noteList.addNote("text")
     return assert.includes(noteList.list, "text")
   }
 
-  exports.testaddNote = testaddNote
-})(this);
+
+   testaddNote()
+
+
+   function testAddNoteIncrementsCounter() {
+     var noteList = new NoteList()
+     noteList.addNote("text")
+     assert.isSame(noteList.idcounter, 1)
+   }
+
+   testAddNoteIncrementsCounter()

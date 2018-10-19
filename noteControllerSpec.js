@@ -3,7 +3,8 @@
   var noteController = new NoteController;
   noteController.uploadList()
   var element = document.getElementById('app');
-  var expectedString = "<ul><li><div>Favourite Drink: Lemonade</div></li></ul>"
+  var expectedString = "<ul><li><div>Favourite Drink: Lem</div></li></ul>"
+  console.log(element)
   assert.isTrue(element.innerHTML === expectedString)
 };
 
