@@ -5,10 +5,9 @@
      noteList.addNote("Stuff")
      var noteListView = new NoteListView(noteList);
      var listItem = noteListView.returnListHTML()
-     var idealListItem = "<ul><li><div>Thing</div></li><li><div>Stuff</div></li></ul>"
+     var idealListItem = '<ul><li> <div> <a href = "#note/0">Thing</a> </div> </li><li> <div> <a href = "#note/1">Stuff</a> </div> </li></ul>'
      console.log(listItem)
      console.log(idealListItem)
-     console.log("hi")
      return assert.isSame(listItem, idealListItem)
 
    }
@@ -22,10 +21,7 @@
     noteList.addNote("123456789012345678901234567890")
     var noteListView = new NoteListView(noteList);
     var listItem = noteListView.returnListHTML()
-    var idealListItem = "<ul><li><div>12345678901234567890</div></li><li><div>12345678901234567890</div></li></ul>"
-    console.log(listItem)
-    console.log(idealListItem)
-    console.log("Yello")
+    var idealListItem = '<ul><li> <div> <a href = "#note/0">12345678901234567890</a> </div> </li><li> <div> <a href = "#note/1">12345678901234567890</a> </div> </li></ul>'
     return assert.isSame(listItem, idealListItem)
 
   }

@@ -1,6 +1,7 @@
 (function(exports) {
   function NoteList() {
      this.list = []
+
      this.idcounter = 0
   }
 
@@ -10,8 +11,8 @@
 
   NoteList.prototype.addNote = function(text) {
     note = new Note(text, this.idcounter)
-    actualText = note.text
-    this.list.push(actualText);
+  //  actualText = note.text
+    this.list.push(note);
     this.idcounter++
   }
 

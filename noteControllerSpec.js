@@ -3,7 +3,7 @@
   var noteController = new NoteController;
   noteController.uploadList()
   var element = document.getElementById('app');
-  var expectedString = "<ul><li><div>Favourite Drink: Lem</div></li></ul>"
+  var expectedString = '<ul><li> <div> <a href="#note/0">Favourite Drink: Lem</a> </div> </li></ul>'
   console.log(element)
   assert.isTrue(element.innerHTML === expectedString)
 };
@@ -31,7 +31,7 @@ function testUploadList_222() {
 
  NoteListViewDouble.prototype = {
    returnListHTML: function() {
-      return "<ul><li><div>Favourite Drink: Lemonade</div></li></ul>";
+      return "<ul><li><div>Favourite Drink: Lem</div></li></ul>";
    }
  };
 
@@ -39,7 +39,7 @@ function testUploadList_222() {
  var noteController = new NoteController(listDouble, NoteListViewDouble);
  noteController.uploadList()
  var element = document.getElementById('app');
- var expectedString = "<ul><li><div>Favourite Drink: Lemonade</div></li></ul>"
+ var expectedString = "<ul><li><div>Favourite Drink: Lem</div></li></ul>"
 
 
  assert.isTrue(element.innerHTML === expectedString)

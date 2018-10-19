@@ -1,14 +1,18 @@
 (function(exports) {
   function NoteListView(noteList){
     this.noteList = noteList //I think the problem is that I'm passing in a notelist object not an array
-    console.log(this.noteList)
   };
 
   NoteListView.prototype.returnListHTML = function () {
+
     var array = this.noteList.returnList()
-    var shortArray = array.map(item => item.substring(0, 20))
-    return "<ul><li><div>" + shortArray.join("</div></li><li><div>") + "</div></li></ul>"
+    var startList = "<ul>"
+    var htmlstring = array.map( item => '<li> <div> <a href = "#note/' + item.id + '">' + item.text.substring(0, 20) + '</a> </div> </li>').join('')
+    var endList = "</ul>"
+    return startList + htmlstring + endList
   };
+
+
 
   exports.NoteListView = NoteListView
 })(this);

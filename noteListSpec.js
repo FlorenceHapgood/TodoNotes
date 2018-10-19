@@ -1,9 +1,7 @@
 
   function testReturnList() {
     var noteList = new NoteList();
-    if (assert.isSame(noteList.returnList(), noteList.list) === true) {
-      console.log("This test is passing!")
-    }
+    assert.isTrue(noteList.returnList() === noteList.list)
   }
 
    testReturnList()
@@ -25,3 +23,9 @@
    }
 
    testAddNoteIncrementsCounter()
+
+
+
+     NoteList.prototype.returnList = function() {
+       return this.list
+     }

@@ -7,9 +7,15 @@
   </head>
   <body>
 
-    <div id="app"> "Hello!" </div>
+    <a id="app"> "Hello!" </a>
+
+    <script>
+        function makeURLChange(){
+          window.addEventListener("hashchange")
+        }
 
 
+    </script>
 
     <script src="./assert.js"> </script>
     <script src="./note-model.js"> </script>
@@ -22,7 +28,7 @@
     <script src="./noteControllerSpec.js"></script>
     <script src="./single-note-view.js"></script>
     <script src="./singleNoteViewSpec.js"></script>
-    
+
 
   </body>
 </html>
